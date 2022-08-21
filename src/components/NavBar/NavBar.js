@@ -1,0 +1,30 @@
+import logo from '../../img/logo.jpeg'
+import './NavBar.css'
+
+const NavBar = () => {
+    return (
+        <div className='navbar-container'>
+           <div>
+                <img width={'150px'} height={'100px'} src={logo} alt='logo' />
+            </div> 
+           <div>
+                <ul>
+                    <li>
+                        <a href='#'>Inicio</a>
+                    </li>
+                    <li>
+                        <a href='#'>Productos</a>
+                    </li>
+                    <li>
+                        <a href='#'>Contacto</a>
+                    </li>
+                </ul>
+           </div> 
+           <div>
+                <button>Ingresar</button>
+           </div> 
+        </div>
+    )
+}
+
+export default NavBar;
