@@ -1,6 +1,7 @@
 import logo from '../../img/logo.jpeg'
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
+import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -11,22 +12,26 @@ const NavBar = () => {
             <div>
                 <ul>
                     <li>
-                        <a href=''>Inicio</a>
+                        <NavLink to='/'>Inicio</NavLink>
                     </li>
                     <li>
-                        <a href=''>Products</a>
+                        <NavLink to='/categoria/:categoriaId'>Desayunos</NavLink>
                     </li>
                     <li>
-                        <a href=''>Contacto</a>
+                        <NavLink to='/categoria/:categoriaId'>Postres</NavLink>
+                    </li>
+                    <li>
+                    <NavLink to='/cart'>
+                        <CartWidget />
+                    </NavLink>
                     </li>
                 </ul>
             </div>
             
-            <CartWidget />
-            
+{/*             
             <div>
                 <button>Ingresar</button>
-            </div> 
+            </div>  */}
         </div>
     )
 }
